@@ -1,0 +1,20 @@
+# Node modules
+node_modules/
+backend/node_modules/
+frontend/node_modules/
+
+# Environment variables
+.env
+backend/.env
+
+# Mac system files
+.DS_Store
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Optional npm cache and locks (if you don't want to track locks)
+# package-lock.json
+# backend/package-lock.json
