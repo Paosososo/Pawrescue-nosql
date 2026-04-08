@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Provider Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="providerDashboard">
+
+<div class="app-screen">
+    <div class="header-bar">
+        <h1 class="app-logo">Dashboard</h1>
+        <p class="page-greeting">Food Provider Hub</p>
+    </div>
+
+    <div class="screen-content">
+        <div class="card" style="background-color: var(--primary-blue); color: white; border: none;">
+            <h3 style="margin: 0; font-size: 18px; color: white;">Your Donations help!</h3>
+            <p style="margin: 8px 0 16px 0; font-size: 14px; opacity: 0.9;">You have generated a positive impact. Thank you for utilizing PawRescue!</p>
+            <a href="provider-create.html" class="btn-secondary" style="color: var(--primary-blue); text-align: center; border: none;">+ Donate Now</a>
+        </div>
+
+        <h3 class="section-title">Overview Statistics</h3>
+        <div class="card grid bg-white" style="text-align: center;">
+            <p class="text-muted">You are actively reducing food waste and helping animals.</p>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="provider-dashboard.html" class="active"><i class="nav-icon">🏠</i>Home</a>
+        <a href="provider-create.html"><i class="nav-icon">➕</i>Create</a>
+        <a href="provider-history.html"><i class="nav-icon">📋</i>History</a>
+        <a href="login.html" onclick="logout()"><i class="nav-icon">👤</i>Logout</a>
+    </nav>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

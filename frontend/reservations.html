@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawRescue - Bookings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-screen">
+    
+    <div class="header-bar">
+        <h1 class="app-logo">PawRescue</h1>
+        <p class="page-greeting">Manage food reservations</p>
+    </div>
+
+    <!-- Give the scrollable area an id to reset scroll on edit -->
+    <div class="screen-content" id="screenContent">
+        <h2 class="page-title">Current <span>Bookings</span></h2>
+
+        <h3 class="section-title">Save a Booking</h3>
+        <form id="reservationForm" class="card">
+            <input type="hidden" id="reservationId">
+            <div class="form-group">
+                <label>Donation ID</label>
+                <input type="text" id="donationId" class="form-input" placeholder="Object ID" required>
+            </div>
+            <div class="form-group">
+                <label>Shelter ID</label>
+                <input type="text" id="shelterId" class="form-input" placeholder="Object ID" required>
+            </div>
+            <div class="form-group">
+                <label>Provider ID</label>
+                <input type="text" id="providerId" class="form-input" placeholder="Object ID" required>
+            </div>
+            <div class="form-group mb-16">
+                <label>Reserve Status</label>
+                <select id="reservationStatus" class="form-input">
+                    <option value="pending">pending</option>
+                    <option value="confirmed">confirmed</option>
+                    <option value="completed">completed</option>
+                    <option value="cancelled">cancelled</option>
+                </select>
+            </div>
+            <button type="submit" class="btn-primary">Save Booking</button>
+        </form>
+
+        <h3 class="section-title mt-24">Reservations List</h3>
+        <div id="reservationsList">
+            <div class="card text-center page-greeting" style="box-shadow:none;">Loading bookings...</div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="login.html">
+            <i class="nav-icon">👤</i>
+            Profile
+        </a>
+        <a href="donations.html">
+            <i class="nav-icon">🥩</i>
+            Donations
+        </a>
+        <a href="reservations.html" class="active">
+            <i class="nav-icon">📅</i>
+            Bookings
+        </a>
+        <a href="reports.html">
+            <i class="nav-icon">📊</i>
+            Reports
+        </a>
+    </nav>
+</div>
+
+<script src="app.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => initReservations());
+</script>
+</body>
+</html>

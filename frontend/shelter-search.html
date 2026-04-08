@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Food</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-screen">
+    <div class="header-bar">
+        <h1 class="app-logo">Search</h1>
+        <p class="page-greeting">Available donations near you</p>
+    </div>
+
+    <div class="screen-content">
+        <h3 class="section-title">Filter Directory</h3>
+        <div class="card" style="display: flex; gap: 8px;">
+            <input type="text" id="searchShelterInput" class="form-input" placeholder="Keyword..." style="margin-bottom:0; flex:1;">
+            <button class="btn-primary" style="width: auto;" onclick="initShelterSearch()">Go</button>
+        </div>
+
+        <div id="shelterSearchList">
+            <div class="card text-center page-greeting">Loading network...</div>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="shelter-dashboard.html"><i class="nav-icon">🏠</i>Home</a>
+        <a href="shelter-search.html" class="active"><i class="nav-icon">🔍</i>Search</a>
+        <a href="shelter-history.html"><i class="nav-icon">📋</i>History</a>
+        <a href="login.html" onclick="logout()"><i class="nav-icon">👤</i>Logout</a>
+    </nav>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

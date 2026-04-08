@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawRescue - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-screen">
+    <div class="top-curve">
+        <div style="font-size: 40px; margin-bottom: 10px;">🐾</div>
+        <h1 style="margin:0; font-size: 24px; color: var(--primary-blue);">Welcome Back</h1>
+        <p style="margin: 5px 0 0 0; color: var(--text-muted); font-size: 14px;">Sign in to continue</p>
+    </div>
+
+    <div class="screen-content" style="padding-top: 40px;">
+        <form class="card">
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" class="form-input" placeholder="user@email.com" required>
+            </div>
+            
+            <div class="form-group mb-16">
+                <label>Password</label>
+                <input type="password" class="form-input" placeholder="••••••••" required>
+            </div>
+            
+            <p class="text-center" style="font-size: 12px; margin-bottom: 20px;">
+                *For assignment purposes, clicking below simulates login.
+            </p>
+
+            <button type="button" onclick="loginAs('provider')" class="btn-primary" style="margin-bottom:12px;">Login as Food Provider</button>
+            <button type="button" onclick="loginAs('shelter')" class="btn-outline" style="margin-bottom:24px;">Login as Animal Shelter</button>
+            
+            <button type="button" onclick="window.location.href='reports.html'" class="btn-secondary" style="border:none; width:100%; box-shadow:none; color: var(--primary-blue);">View Database Reports</button>
+        </form>
+
+        <p class="text-center page-greeting mt-24">
+            Don't have an account? <a href="register.html" style="color: var(--primary-blue); font-weight: 600;">Register</a>
+        </p>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

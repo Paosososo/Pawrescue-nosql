@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shelter Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="shelterDashboard">
+
+<div class="app-screen">
+    <div class="header-bar">
+        <h1 class="app-logo">Shelter Center</h1>
+        <p class="page-greeting">Find and rescue food supplies</p>
+    </div>
+
+    <div class="screen-content">
+        <div class="card" style="background-color: var(--primary-blue); color: white; border: none;">
+            <h3 style="margin: 0; font-size: 18px; color: white;">Find available supplies</h3>
+            <p style="margin: 8px 0 16px 0; font-size: 14px; opacity: 0.9;">Utilize the search network to discover newly available surplus donations.</p>
+            <a href="shelter-search.html" class="btn-secondary" style="color: var(--primary-blue); text-align: center; border: none;">🔍 Search Food</a>
+        </div>
+
+        <h3 class="section-title">Activity Overview</h3>
+        <div class="card grid bg-white" style="text-align: center;">
+            <p class="text-muted">You are actively utilizing the PawRescue network effectively.</p>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="shelter-dashboard.html" class="active"><i class="nav-icon">🏠</i>Home</a>
+        <a href="shelter-search.html"><i class="nav-icon">🔍</i>Search</a>
+        <a href="shelter-history.html"><i class="nav-icon">📋</i>History</a>
+        <a href="login.html" onclick="logout()"><i class="nav-icon">👤</i>Logout</a>
+    </nav>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

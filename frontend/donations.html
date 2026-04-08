@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawRescue - Donations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-screen">
+    
+    <div class="header-bar">
+        <h1 class="app-logo">PawRescue</h1>
+        <p class="page-greeting">Manage food donations</p>
+    </div>
+
+    <div class="screen-content">
+        <h2 class="page-title">Available <span>Food</span></h2>
+
+        <!-- Search & Filter Card -->
+        <div class="card">
+            <div class="form-group">
+                <input type="text" id="searchFood" class="form-input" placeholder="Search kibble, treats...">
+            </div>
+            <div style="display: flex; gap: 8px;">
+                <select id="filterCategory" class="form-input" style="flex: 1; padding: 10px;">
+                    <option value="">All Categories</option>
+                    <option value="Dry Food">Dry Food</option>
+                    <option value="Wet Food">Wet Food</option>
+                </select>
+                <button id="searchBtn" class="btn-secondary" style="flex: 0.5;">Search</button>
+            </div>
+        </div>
+
+        <h3 class="section-title">Latest Listings</h3>
+        
+        <!-- Donations Container -->
+        <div id="donationsList">
+            <!-- Loading placeholder -->
+            <div class="card text-center page-greeting">Loading donations...</div>
+        </div>
+
+        <h3 class="section-title mt-24">Add Donation</h3>
+        <form id="donationForm" class="card">
+            <input type="hidden" id="donationId">
+            <div class="form-group">
+                <label>Provider ID</label>
+                <input type="text" id="providerId" class="form-input" placeholder="ID (Mock)" required>
+            </div>
+            <div class="form-group">
+                <label>Food Name</label>
+                <input type="text" id="foodName" class="form-input" placeholder="E.g. Salmon Kibble" required>
+            </div>
+            <div style="display: flex; gap: 12px;">
+                <div class="form-group" style="flex: 1;">
+                    <label>Quantity</label>
+                    <input type="number" id="quantity" class="form-input" value="1" required>
+                </div>
+                <div class="form-group" style="flex: 1;">
+                    <label>Unit</label>
+                    <select id="unit" class="form-input">
+                        <option value="kg">kg</option>
+                        <option value="lbs">lbs</option>
+                        <option value="cans">cans</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Category</label>
+                <select id="category" class="form-input" required>
+                    <option value="Dry Food">Dry Food</option>
+                    <option value="Wet Food">Wet Food</option>
+                    <option value="Treats">Treats</option>
+                    <option value="Supplies">Supplies</option>
+                </select>
+            </div>
+            <div class="form-group mb-16">
+                <label>Status</label>
+                <select id="status" class="form-input">
+                    <option value="available">Available</option>
+                    <option value="reserved">Reserved</option>
+                    <option value="picked_up">Picked Up</option>
+                </select>
+            </div>
+            <button type="submit" class="btn-primary">Post Donation</button>
+        </form>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="login.html">
+            <i class="nav-icon">👤</i>
+            Profile
+        </a>
+        <a href="donations.html" class="active">
+            <i class="nav-icon">🥩</i>
+            Donations
+        </a>
+        <a href="reservations.html">
+            <i class="nav-icon">📅</i>
+            Bookings
+        </a>
+        <a href="reports.html">
+            <i class="nav-icon">📊</i>
+            Reports
+        </a>
+    </nav>
+</div>
+
+<script src="app.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => initDonations());
+</script>
+</body>
+</html>

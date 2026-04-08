@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="reportsDashboard">
+
+<div class="app-screen">
+    <div class="header-bar text-center">
+        <h1 class="app-logo">System Admin</h1>
+        <p class="page-greeting">Database Aggregations & Reporting</p>
+    </div>
+
+    <div class="screen-content">
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="label">Total Providers</div>
+                <div class="value" id="valProviders">0</div>
+            </div>
+            <div class="metric-card">
+                <div class="label">Total Shelters</div>
+                <div class="value" id="valShelters">0</div>
+            </div>
+            <div class="metric-card">
+                <div class="label">Total Donations</div>
+                <div class="value" id="valDonations">0</div>
+            </div>
+            <div class="metric-card">
+                <div class="label">Food Quantity</div>
+                <div class="value" id="valQuantity">0</div>
+            </div>
+        </div>
+
+        <h3 class="section-title mt-24">Donations by Status</h3>
+        <div class="card" id="statusList">
+            <div class="listing-meta text-center">Loading MongoDB aggregations...</div>
+        </div>
+
+        <h3 class="section-title mt-24">Donations by Category</h3>
+        <div class="card" id="categoryList">
+            <div class="listing-meta text-center">Loading MongoDB aggregations...</div>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="login.html" onclick="logout()" class="active"><i class="nav-icon">🚪</i>Exit Reports</a>
+    </nav>
+</div>
+
+<script src="app.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => initReports());
+</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PawRescue - Shelters</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>PawRescue NoSQL</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="providers.html">Providers</a></li>
+                <li><a href="shelters.html" class="active">Shelters</a></li>
+                <li><a href="donations.html">Donations</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="reports.html">Reports</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Manage Shelters</h2>
+        <div class="card">
+            <h3 id="formTitle">Add New Shelter</h3>
+            <form id="shelterForm">
+                <input type="hidden" id="shelterId">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="text" id="phone">
+                </div>
+                <div class="form-group">
+                    <label>Address</label>
+                    <input type="text" id="address">
+                </div>
+                <div class="form-group">
+                    <label>Contact Person</label>
+                    <input type="text" id="contactPerson">
+                </div>
+                <div class="form-group" style="flex-direction: row; align-items: center; gap: 10px;">
+                    <label>Verified Status:</label>
+                    <input type="checkbox" id="verified" style="width: auto;">
+                </div>
+                <button type="submit">Save Shelter</button>
+            </form>
+        </div>
+
+        <h2>Shelters List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Contact</th>
+                    <th>Verified</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="sheltersTableBody">
+            </tbody>
+        </table>
+    </main>
+    <script src="app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => initShelters());
+    </script>
+</body>
+</html>
