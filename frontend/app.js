@@ -94,7 +94,7 @@ async function initProviderHistory() {
     const data = await res.json();
     
     const myId = localStorage.getItem('demoProviderId');
-    const myDonations = data.filter(d => (d.providerId._id || d.providerId) === myId);
+    const myDonations = data.filter(d => d.providerId && (d.providerId._id || d.providerId) === myId);
     
     list.innerHTML = '';
     if(myDonations.length === 0) {
